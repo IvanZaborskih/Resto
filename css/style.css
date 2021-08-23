@@ -1,0 +1,318 @@
+/*
+Размеры и отступы
+Внешнее оформления
+Шрифты
+Позиционирование
+Анимация и трансформация
+*/
+
+body {
+    margin: 0;
+
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+
+/* Container
+============================= */
+.container {
+    width: 100%;
+    max-width: 1130px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+/* Header
+============================= */
+.header {
+    box-shadow: 0 2px 5px #e3e3e3;
+}
+
+.header__inner {
+    height: 61px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Nav
+============================= */
+.nav {
+    margin-right: 93px;
+
+    display: flex;
+}
+
+.nav__link {
+    margin: 0 38px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: #e93c3c;
+    opacity: 0;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover:after{
+    opacity: 1;
+}
+
+.nav div {
+    color: #c7b5ac;
+}
+
+
+/* First screen
+============================= */
+.first__screen{
+    height: 638px;
+
+    background: url(../img/first-bg.jpg) center no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first__screen--inner {
+    text-align: center;
+}
+
+.logo__icon--big{
+    margin-bottom: 47px;
+}
+
+.first__title {
+    margin-bottom: 22px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.first__subscribtion {
+    margin-top: 20px;
+}
+
+
+/* Dishes
+============================= */
+.dishes {
+    height: 902px;
+
+    background: url(../img/dish-bg.jpg) center no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dishes--steak {
+    background: url(../img/steak-bg.jpg) center no-repeat;
+    background-size: cover;
+
+    flex-direction: initial;
+    justify-content: initial;
+}
+
+.dishes__inner {
+    width: 100%;
+    max-width: 722px;
+}
+
+.dishes__inner--steak {
+    margin-top: 120px;
+}
+
+.dishes__fieldset {
+    border: 5px solid #fff;
+}
+
+.dishes__title {
+    padding: 0 123px 0 28px;
+
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.dishes__title--steak {
+    padding: 0 28px;
+}
+
+.dishes__info p {
+    padding: 25px 10px 0 30px;
+
+    font-size: 20px;
+    color: #fff;
+}
+
+.dishes__price {
+    margin: 40px 0;
+    padding: 0 28px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish__price {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.dish__mass {
+    font-size: 16px;
+    color: #fff;
+
+    align-self: flex-end;
+}
+
+
+/* Menu
+============================= */
+.menu {
+    margin: 87px 0 60px;
+}
+
+.menu__header {
+    margin-bottom: 10px;
+
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.menu__categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__cat {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.menu__cat:first-child {
+    border-top: 1px solid #e5e5e5;
+}
+
+.category__info {
+    padding: 17px 0;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.categ__icon {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    z-index: 2;
+
+    transform: translate3d(0, -50%, 0);
+}
+
+.category__name {
+    padding-left: 93px;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.category__dishes {
+    margin-top: 5px;
+    margin-bottom: 100px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.categoty__dish {
+    width: 20%;
+}
+
+.cat__dihs--title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.cat__dish--text {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+.cat__dish--weight {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+.cat__dish--price {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* Gallary
+============================= */
+.gallary__inner {
+    height: 197px;
+
+    overflow: hidden;
+}
+
+.gallary__inner {
+    display: flex;
+}
+
+
+
+
+
